@@ -1,4 +1,6 @@
 # Default ignored files
+chromedriver.exe
+geckodriver.exe
 /shelf/
 /workspace.xml
 /venv/

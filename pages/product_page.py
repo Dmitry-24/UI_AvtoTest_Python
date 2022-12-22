@@ -20,3 +20,10 @@ class ProductPage(BasePage):
         itembasketname = self.browser.find_element(*ProductPageLocators.BASKET_ITEM_NAME)
         assert  itemname.text == itembasketname.text, 'Uncorrected item name'
 
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be"
+
+    def should_not_be_success_message_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be"

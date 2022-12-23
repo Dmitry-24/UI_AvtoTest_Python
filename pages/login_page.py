@@ -1,5 +1,6 @@
 from pages.base_page import BasePage
 from pages.locators import LoginPageLocators
+import faker
 
 
 class LoginPage(BasePage):
@@ -16,3 +17,9 @@ class LoginPage(BasePage):
 
     def should_be_register_form(self):
         assert self.browser.find_element(*LoginPageLocators.REGISTER_FORM), "Register form is not presented"
+
+    def register_new_user(self, email, password):
+        pass
+
+
+

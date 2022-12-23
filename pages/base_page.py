@@ -54,7 +54,7 @@ class BasePage():
 
         return True
 
-    #method fot capcha check
+    #method for capcha check
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert
         x = alert.text.split(" ")[2]
